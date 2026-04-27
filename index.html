@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Haikal Ahmed – Full Stack Developer. Building powerful web apps with React, Spring Boot & PostgreSQL. Available for freelance & remote work." />
+  <meta name="keywords" content="full stack developer, React developer, Spring Boot, PostgreSQL, freelance developer, Haikal Ahmed" />
+  <meta property="og:title" content="Haikal Ahmed | Full Stack Developer" />
+  <meta property="og:description" content="I build fast, scalable web apps clients love and investors trust." />
+  <title>Haikal Ahmed | Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <span class="loader-text">HA</span>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>HA<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-cta">
+      <a href="https://wa.me/254758382221" target="_blank" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Me
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <span class="badge-dot"></span>
+            Available for projects
+          </div>
+          <h1 class="hero-title reveal">
+            I Build Web Apps<br />
+            <span class="gradient-text">Clients Pay For.</span>
+          </h1>
+          <p class="hero-subtitle reveal">
+            Hi, I'm <strong>Haikal Ahmed</strong> — a Full Stack Developer crafting scalable, production-ready applications with <span class="highlight">React</span>, <span class="highlight">Spring Boot</span> & <span class="highlight">PostgreSQL</span>.
+          </p>
+          <div class="hero-stats reveal">
+            <div class="stat">
+              <span class="stat-num" data-target="30">0</span><span class="stat-num">+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num" data-target="100">0</span><span class="stat-num">%</span>
+              <span class="stat-label">Client Satisfaction</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num" data-target="3">0</span><span class="stat-num">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+          </div>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              View My Work <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you." target="_blank" class="btn btn-whatsapp btn-lg">
+              <i class="fab fa-whatsapp"></i> WhatsApp Me
+            </a>
+          </div>
+          <div class="hero-contact-bar reveal">
+            <a href="tel:+254758382221" class="contact-chip">
+              <i class="fas fa-phone"></i> +254 758 382 221
+            </a>
+            <a href="mailto:haikalahmed38@gmail.com" class="contact-chip">
+              <i class="fas fa-envelope"></i> haikalahmed38@gmail.com
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">HaikalAhmed.ts</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Haikal Ahmed"</span>,
+  <span class="code-prop">role</span>: <span class="code-str">"Full Stack Developer"</span>,
+  <span class="code-prop">stack</span>: {
+    <span class="code-prop">frontend</span>: [<span class="code-str">"React"</span>, <span class="code-str">"Vite"</span>,
+               <span class="code-str">"TailwindCSS"</span>],
+    <span class="code-prop">backend</span>: [<span class="code-str">"Spring Boot"</span>],
+    <span class="code-prop">db</span>: [<span class="code-str">"PostgreSQL"</span>]
+  },
+  <span class="code-prop">available</span>: <span class="code-bool">true</span>,
+  <span class="code-prop">hire</span>: () <span class="code-keyword">=></span> <span class="code-str">"Let's build!"</span>
+};</code></pre>
+            </div>
+            <div class="code-footer">
+              <span class="pulse-dot"></span>
+              <span>Ready to ship your project</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">The Developer Behind the Code</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <div class="about-img-placeholder">
+              <div class="avatar-initials">Haikal</div>
+              <div class="avatar-ring ring-1"></div>
+              <div class="avatar-ring ring-2"></div>
+            </div>
+            <div class="about-badges">
+              <div class="about-badge">
+                <i class="fas fa-check-circle"></i> Open to Remote
+              </div>
+              <div class="about-badge">
+                <i class="fas fa-clock"></i> Fast Delivery
+              </div>
+              <div class="about-badge">
+                <i class="fas fa-shield-alt"></i> Clean Code
+              </div>
+            </div>
+          </div>
+          <div class="about-content reveal">
+            <h3 class="about-headline">I don't just write code. I build business solutions.</h3>
+            <p class="about-text">
+              With 3+ years of hands-on experience, I specialize in building <strong>end-to-end web applications</strong> that go from concept to deployment. Whether you need a lightning-fast React frontend, a robust Spring Boot API, or a well-optimized PostgreSQL database — I've got you covered.
+            </p>
+            <p class="about-text">
+              My focus is always on <strong>real business impact</strong>: faster load times, clean architecture, and scalable code that doesn't break when your user base grows.
+            </p>
+            <div class="value-props">
+              <div class="value-prop">
+                <i class="fas fa-bolt"></i>
+                <div>
+                  <h4>Fast & Reliable</h4>
+                  <p>On-time delivery with clear communication throughout every project.</p>
+                </div>
+              </div>
+              <div class="value-prop">
+                <i class="fas fa-layer-group"></i>
+                <div>
+                  <h4>Full-Stack Ownership</h4>
+                  <p>One developer for both frontend and backend — no coordination delays.</p>
+                </div>
+              </div>
+              <div class="value-prop">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                  <h4>Scalable Architecture</h4>
+                  <p>Code built to grow with your business, not fall apart under pressure.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary mt-2">Let's Work Together <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Do</span>
+          <h2 class="section-title">Services That Drive Results</h2>
+          <p class="section-subtitle">Every service is crafted to solve real business problems — not just look good.</p>
+        </div>
+        <div class="services-grid">
+
+          <div class="service-card reveal" data-delay="0">
+            <div class="service-icon"><i class="fas fa-desktop"></i></div>
+            <h3>Frontend Development</h3>
+            <p>Pixel-perfect, blazing-fast UIs built with React + Vite. Animated, accessible, and optimized for conversions.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> React + Vite SPAs</li>
+              <li><i class="fas fa-check"></i> Tailwind CSS & custom design</li>
+              <li><i class="fas fa-check"></i> Framer Motion animations</li>
+              <li><i class="fas fa-check"></i> Mobile-first responsive layouts</li>
+            </ul>
+            <div class="service-price">From <strong>$1000</strong></div>
+          </div>
+
+          <div class="service-card service-card--featured reveal" data-delay="100">
+            <div class="featured-badge">Most Popular</div>
+            <div class="service-icon"><i class="fas fa-server"></i></div>
+            <h3>Full Stack Development</h3>
+            <p>Complete web applications from database to dashboard. React frontend + Spring Boot REST API + PostgreSQL.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> REST API design & development</li>
+              <li><i class="fas fa-check"></i> Database schema & optimization</li>
+              <li><i class="fas fa-check"></i> Auth (JWT / OAuth2)</li>
+              <li><i class="fas fa-check"></i> Cloud deployment & CI/CD</li>
+            </ul>
+            <div class="service-price">From <strong>$2000</strong></div>
+          </div>
+
+          <div class="service-card reveal" data-delay="200">
+            <div class="service-icon"><i class="fas fa-database"></i></div>
+            <h3>Backend & API Development</h3>
+            <p>Robust, secure, and scalable Spring Boot APIs with PostgreSQL. Built for performance under real-world load.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> Spring Boot microservices</li>
+              <li><i class="fas fa-check"></i> PostgreSQL optimization</li>
+              <li><i class="fas fa-check"></i> API documentation (Swagger)</li>
+              <li><i class="fas fa-check"></i> Security & validation</li>
+            </ul>
+            <div class="service-price">From <strong>$1500</strong></div>
+          </div>
+
+          <div class="service-card reveal" data-delay="300">
+            <div class="service-icon"><i class="fas fa-rocket"></i></div>
+            <h3>Performance Optimization</h3>
+            <p>Slow app losing you customers? I'll audit and optimize your application for speed, SEO, and user experience.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> Core Web Vitals audit</li>
+              <li><i class="fas fa-check"></i> Bundle size reduction</li>
+              <li><i class="fas fa-check"></i> DB query optimization</li>
+              <li><i class="fas fa-check"></i> Caching strategies</li>
+            </ul>
+            <div class="service-price">From <strong>$750</strong></div>
+          </div>
+
+          <div class="service-card reveal" data-delay="400">
+            <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>Legacy Code Rescue</h3>
+            <p>Inherited messy code? I'll refactor, modernize, and stabilize your codebase without breaking production.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> Code review & audit</li>
+              <li><i class="fas fa-check"></i> Refactoring & modernization</li>
+              <li><i class="fas fa-check"></i> Test coverage implementation</li>
+              <li><i class="fas fa-check"></i> Documentation</li>
+            </ul>
+            <div class="service-price">From <strong>$800</strong></div>
+          </div>
+
+          <div class="service-card reveal" data-delay="500">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>SaaS MVP Development</h3>
+            <p>Got a startup idea? I'll help you ship a production-ready MVP fast — so you can validate before burning runway.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> MVP scoping & planning</li>
+              <li><i class="fas fa-check"></i> Rapid development sprints</li>
+              <li><i class="fas fa-check"></i> User auth & subscriptions</li>
+              <li><i class="fas fa-check"></i> Launch-ready deployment</li>
+            </ul>
+            <div class="service-price">From <strong>$2,500</strong></div>
+          </div>
+
+        </div>
+        <div class="services-cta reveal">
+          <p>Not sure what you need? Let's talk — I'll tell you exactly what it takes.</p>
+          <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20need%20help%20with%20a%20project." target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fab fa-whatsapp"></i> Discuss Your Project
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Tools I Master to Build Your Vision</h2>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title"><i class="fas fa-paint-brush"></i> Frontend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>React + Vite</span>
+                  <span class="skill-pct">95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Tailwind CSS</span>
+                  <span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Framer Motion</span>
+                  <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>TypeScript</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title"><i class="fas fa-cogs"></i> Backend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Spring Boot</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Java</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>REST API Design</span>
+                  <span class="skill-pct">93%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Spring Security / JWT</span>
+                  <span class="skill-pct">82%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category reveal">
+            <h3 class="skill-cat-title"><i class="fas fa-database"></i> Database & DevOps</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>PostgreSQL</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Git & GitHub</span>
+                  <span class="skill-pct">95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>Docker</span>
+                  <span class="skill-pct">78%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span>CI/CD Pipelines</span>
+                  <span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="tech-tags reveal">
+          <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+          <span class="tech-tag">⚡ Vite</span>
+          <span class="tech-tag">🎨 Tailwind CSS</span>
+          <span class="tech-tag">🌀 Framer Motion</span>
+          <span class="tech-tag">☕ Spring Boot</span>
+          <span class="tech-tag">🐘 PostgreSQL</span>
+          <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+          <span class="tech-tag"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="tech-tag">🔐 JWT / OAuth2</span>
+          <span class="tech-tag">📘 TypeScript</span>
+          <span class="tech-tag">🧪 JUnit</span>
+          <span class="tech-tag">📖 Swagger</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Projects That Prove the Work</h2>
+          <p class="section-subtitle">Real applications. Real users. Real impact.</p>
+        </div>
+        <div class="projects-grid">
+
+          <article class="project-card reveal" data-delay="0">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-store"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">Full-featured e-commerce app with product management, cart, checkout, payments integration, and admin dashboard.</p>
+            <div class="project-tags">
+              <span>React</span><span>Spring Boot</span><span>PostgreSQL</span><span>Stripe</span>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-users"></i> 500+ Users</span>
+              <span><i class="fas fa-tachometer-alt"></i> 98 Lighthouse</span>
+            </div>
+          </article>
+
+          <article class="project-card project-card--featured reveal" data-delay="100">
+            <div class="project-featured-label">Featured</div>
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-tasks"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">SaaS Project Management Tool</h3>
+            <p class="project-desc">Multi-tenant SaaS app with real-time collaboration, role-based access, Kanban boards, and team analytics dashboard.</p>
+            <div class="project-tags">
+              <span>React</span><span>Vite</span><span>Spring Boot</span><span>PostgreSQL</span><span>WebSocket</span>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-building"></i> 12 Teams</span>
+              <span><i class="fas fa-clock"></i> 40% Faster Delivery</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-delay="200">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Healthcare Booking System</h3>
+            <p class="project-desc">Online appointment booking platform for clinics with patient records, scheduling, email notifications, and reports.</p>
+            <div class="project-tags">
+              <span>React</span><span>TailwindCSS</span><span>Spring Boot</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-calendar-check"></i> 1,200+ Bookings</span>
+              <span><i class="fas fa-star"></i> 4.9 Rating</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-delay="300">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Business Analytics Dashboard</h3>
+            <p class="project-desc">Real-time analytics dashboard with interactive charts, KPI tracking, CSV export, and customizable report generation.</p>
+            <div class="project-tags">
+              <span>React</span><span>Chart.js</span><span>Spring Boot</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-chart-line"></i> 30+ KPIs</span>
+              <span><i class="fas fa-bolt"></i> Real-time</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-delay="400">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Online Learning Platform</h3>
+            <p class="project-desc">LMS platform with course creation, video streaming, quizzes, progress tracking, and certificate generation.</p>
+            <div class="project-tags">
+              <span>React</span><span>Framer Motion</span><span>Spring Boot</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-user-graduate"></i> 300+ Students</span>
+              <span><i class="fas fa-video"></i> 50+ Courses</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-delay="500">
+            <div class="project-header">
+              <div class="project-icon"><i class="fas fa-wallet"></i></div>
+              <div class="project-links">
+                <a href="#" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                <a href="#" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">FinTech Expense Tracker</h3>
+            <p class="project-desc">Personal finance app with budget planning, expense categorization, spending insights, and secure bank-level auth.</p>
+            <div class="project-tags">
+              <span>React</span><span>TypeScript</span><span>Spring Boot</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-shield-alt"></i> Bank-level Security</span>
+              <span><i class="fas fa-mobile"></i> PWA</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="projects-cta reveal">
+          <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20want%20to%20discuss%20a%20project%20like%20one%20of%20your%20portfolio%20items." target="_blank" class="btn btn-primary btn-lg">
+            Start Your Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Client Reviews</span>
+          <h2 class="section-title">What Clients Say</h2>
+        </div>
+        <div class="testimonials-slider reveal">
+          <div class="testimonials-track" id="testimonialsTrack">
+
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Haikal delivered our SaaS MVP in 6 weeks. The code quality was exceptional — our CTO was impressed. We launched on time and got our first paying customers within a week."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">JM</div>
+                <div>
+                  <strong>James M.</strong>
+                  <span>CEO, TechStart Kenya</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Professional, fast, and communicative. Haikal rebuilt our legacy system using Spring Boot and React. Our app performance improved by 300%. Worth every penny."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">SN</div>
+                <div>
+                  <strong>Sarah N.</strong>
+                  <span>CTO, HealthBridge Ltd</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Haikal built our e-commerce platform from scratch. The PostgreSQL optimization he did saved us thousands in server costs. Highly recommend for any serious project."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">AK</div>
+                <div>
+                  <strong>Ali K.</strong>
+                  <span>Founder, ShopEasy Africa</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"We hired Haikal to build our analytics dashboard. He understood our business needs perfectly and delivered a beautiful, functional product. The React UI is stunning."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">PR</div>
+                <div>
+                  <strong>Patricia R.</strong>
+                  <span>Data Lead, AnalyticsPro</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BAND ===== -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-band-content reveal">
+          <h2>Ready to Build Something Great?</h2>
+          <p>Let's turn your idea into a production-ready application. Fast, clean, and scalable.</p>
+          <div class="cta-band-actions">
+            <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I'm%20ready%20to%20start%20a%20project." target="_blank" class="btn btn-whatsapp btn-lg">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="mailto:haikalahmed38@gmail.com" class="btn btn-outline btn-lg">
+              <i class="fas fa-envelope"></i> Send an Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Start Your Project Today</h2>
+          <p class="section-subtitle">I respond within 2 hours on business days.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Prefer a quick chat?</h3>
+            <p>Reach out directly via WhatsApp or email — I'm fast to respond and always happy to discuss ideas.</p>
+
+            <div class="contact-methods">
+              <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project." target="_blank" class="contact-method contact-method--whatsapp">
+                <div class="contact-method-icon"><i class="fab fa-whatsapp"></i></div>
+                <div>
+                  <span class="contact-method-label">WhatsApp (Fastest Response)</span>
+                  <span class="contact-method-value">+254 758 382 221</span>
+                </div>
+                <i class="fas fa-external-link-alt contact-method-arrow"></i>
+              </a>
+              <a href="tel:+254758382221" class="contact-method">
+                <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <span class="contact-method-label">Phone / Call</span>
+                  <span class="contact-method-value">+254 758 382 221</span>
+                </div>
+                <i class="fas fa-external-link-alt contact-method-arrow"></i>
+              </a>
+              <a href="mailto:haikalahmed38@gmail.com" class="contact-method">
+                <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact-method-label">Email</span>
+                  <span class="contact-method-value">haikalahmed38@gmail.com</span>
+                </div>
+                <i class="fas fa-external-link-alt contact-method-arrow"></i>
+              </a>
+            </div>
+
+            <div class="availability-box">
+              <div class="availability-indicator">
+                <span class="avail-dot"></span>
+                <strong>Currently Available</strong>
+              </div>
+              <p>Accepting new projects — typical response time: <strong>under 2 hours</strong>.</p>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Haikal Ahmed" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="haikalahmed38@gmail.com" required />
+              </div>
+              <div class="form-group">
+                <label for="budget">Project Budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range...</option>
+                  <option value="under-500">Under $500</option>
+                  <option value="500-1000">$500 – $1,000</option>
+                  <option value="1000-3000">$1,000 – $3,000</option>
+                  <option value="3000-plus">$3,000+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Me About Your Project</label>
+                <textarea id="message" name="message" rows="5" placeholder="What are you building? What problem are you solving?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span class="btn-text">Send Message <i class="fas fa-paper-plane"></i></span>
+                <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+              </button>
+              <p class="form-note">Or skip the form — <a href="https://wa.me/254758382221" target="_blank">message me on WhatsApp</a> right now.</p>
+            </form>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+              <h3>Message Sent!</h3>
+              <p>Thanks for reaching out. I'll get back to you within 2 hours.</p>
+              <a href="https://wa.me/254758382221" target="_blank" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Follow up on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo">
+            <span class="logo-bracket">&lt;</span>HA<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Full Stack Developer building scalable web applications that drive real business results.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/254758382221" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:haikalahmed38@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+254758382221" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Frontend Development</a></li>
+            <li><a href="#services">Full Stack Development</a></li>
+            <li><a href="#services">Backend & APIs</a></li>
+            <li><a href="#services">SaaS MVP</a></li>
+            <li><a href="#services">Performance Optimization</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="https://wa.me/254758382221" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a href="tel:+254758382221"><i class="fas fa-phone"></i> +254 758 382 221</a></li>
+            <li><a href="mailto:haikalahmed38@gmail.com"><i class="fas fa-envelope"></i> haikalahmed38@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Haikal Ahmed. All rights reserved.</p>
+        <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with me!</span>
+  </a>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("-VWW3oLVLL-IrH8Ur");
+</script>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
