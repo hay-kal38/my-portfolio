@@ -7,6 +7,12 @@
   <meta name="keywords" content="full stack developer, React developer, Spring Boot, PostgreSQL, freelance developer, Haikal Ahmed" />
   <meta property="og:title" content="Haikal Ahmed | Full Stack Developer" />
   <meta property="og:description" content="I build fast, scalable web apps clients love and investors trust." />
+  <meta property="og:type" content="website" />
+  <!-- TODO: replace with a real preview image URL -->
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/6c63ff/ffffff?text=Haikal+Ahmed" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Haikal Ahmed | Full Stack Developer" />
+  <meta name="twitter:description" content="I build fast, scalable web apps clients love and investors trust." />
   <title>Haikal Ahmed | Full Stack Developer</title>
 
   <!-- Fonts -->
@@ -14,9 +20,9 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body class="theme-light">
 
   <!-- ===== LOADER ===== -->
   <div id="loader" class="loader">
@@ -38,12 +44,18 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+      <button class="theme-toggle theme-toggle--desktop" data-theme-toggle type="button" aria-label="Switch to night mode">
+        <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+        <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+      </button>
+      <!-- TODO: add resume.pdf to the project root folder -->
+      <a href="resume.pdf" class="btn btn-outline nav-cv" download><i class="fas fa-file-alt"></i> Resume</a>
       <a href="#contact" class="btn btn-primary nav-cta">Hire Me</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -55,14 +67,21 @@
   <div class="mobile-menu" id="mobileMenu">
     <ul>
       <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
       <li><a href="#services" class="mobile-link">Services</a></li>
       <li><a href="#skills" class="mobile-link">Skills</a></li>
       <li><a href="#projects" class="mobile-link">Projects</a></li>
-      <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
+    <button class="theme-toggle theme-toggle--mobile" data-theme-toggle type="button" aria-label="Switch to night mode">
+      <span class="theme-toggle-icon-wrap">
+        <i class="fas fa-moon theme-icon theme-icon-moon"></i>
+        <i class="fas fa-sun theme-icon theme-icon-sun"></i>
+      </span>
+      <span data-theme-label>Night mode</span>
+    </button>
     <div class="mobile-cta">
-      <a href="https://wa.me/254758382221" target="_blank" class="btn btn-whatsapp">
+      <a href="https://wa.me/254758382221" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
         <i class="fab fa-whatsapp"></i> WhatsApp Me
       </a>
     </div>
@@ -110,7 +129,10 @@
             <a href="#projects" class="btn btn-primary btn-lg">
               View My Work <i class="fas fa-arrow-right"></i>
             </a>
-            <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you." target="_blank" class="btn btn-whatsapp btn-lg">
+            <a href="resume.pdf" class="btn btn-outline btn-lg" download>
+              <i class="fas fa-file-alt"></i> Download CV
+            </a>
+            <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
               <i class="fab fa-whatsapp"></i> WhatsApp Me
             </a>
           </div>
@@ -168,7 +190,7 @@
         <div class="about-grid">
           <div class="about-image-wrap reveal">
             <div class="about-img-placeholder">
-              <div class="avatar-initials">Haikal</div>
+              <img src="mypic.jpeg" alt="Haikal Ahmed" class="about-photo">
               <div class="avatar-ring ring-1"></div>
               <div class="avatar-ring ring-2"></div>
             </div>
@@ -221,6 +243,249 @@
       </div>
     </section>
 
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="experience" id="experience">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-tag">Background</span>
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">Every role taught me something real — from managing IT infrastructure to shipping fintech products at production scale.</p>
+        </div>
+
+        <!-- ═══ 1. WORK EXPERIENCE ═══ -->
+        <div class="exp-block">
+          <div class="exp-block-header reveal">
+            <div class="exp-block-icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <h3 class="exp-block-title">Work Experience</h3>
+              <p class="exp-block-sub">4 roles · 2024 – Present</p>
+            </div>
+          </div>
+
+          <div class="exp-cards-grid">
+
+            <!-- Card 1 — FinSprint Internship (Current, featured) -->
+            <div class="exp-xcard exp-xcard--indigo exp-xcard--featured reveal">
+              <div class="exp-xcard-accent"></div>
+              <div class="exp-xcard-body">
+                <div class="exp-xcard-top">
+                  <div class="exp-xcard-icon"><i class="fas fa-laptop-code"></i></div>
+                  <div class="exp-xcard-meta">
+                    <span class="exp-xcard-period">Apr 2026 – Present</span>
+                    <span class="exp-badge exp-badge--active"><span class="exp-badge-dot"></span> Current</span>
+                  </div>
+                </div>
+                <h4 class="exp-xcard-title">Full Stack Developer Intern</h4>
+                <p class="exp-xcard-company"><i class="fas fa-building"></i> FinSprint Ltd · Nairobi, Kenya</p>
+                <p class="exp-xcard-desc">Building production-grade fintech solutions — RESTful payment APIs, real-time analytics dashboards, and React-powered client interfaces backed by Spring Boot microservices and PostgreSQL. Participating in sprint planning, code reviews, and live deployments.</p>
+                <div class="exp-tags">
+                  <span>React</span><span>Spring Boot</span><span>PostgreSQL</span><span>Java</span><span>Docker</span><span>REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 — Cashier & Sales System -->
+            <div class="exp-xcard exp-xcard--amber reveal" data-delay="100">
+              <div class="exp-xcard-accent"></div>
+              <div class="exp-xcard-body">
+                <div class="exp-xcard-top">
+                  <div class="exp-xcard-icon"><i class="fas fa-cash-register"></i></div>
+                  <div class="exp-xcard-meta">
+                    <span class="exp-xcard-period">Feb 2026 – Mar 2026</span>
+                    <span class="exp-badge exp-badge--build">Built a System</span>
+                  </div>
+                </div>
+                <h4 class="exp-xcard-title">Cashier & Systems Developer</h4>
+                <p class="exp-xcard-company"><i class="fas fa-store"></i> Retail · Mombasa, Kenya</p>
+                <p class="exp-xcard-desc">Hired as a cashier, spotted operational gaps, and independently built a full <strong>Sales Management System</strong> — inventory tracking, daily reports, receipt generation. Turned a manual cash desk into a real-time dashboard.</p>
+                <div class="exp-highlight">
+                  <i class="fas fa-lightbulb"></i> Turned a cashier desk into a software project.
+                </div>
+                <div class="exp-tags">
+                  <span>PHP</span><span>Laravel</span><span>MySQL</span><span>Bootstrap</span><span>POS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 — ICT Officer, WOPEE -->
+            <div class="exp-xcard exp-xcard--teal reveal" data-delay="150">
+              <div class="exp-xcard-accent"></div>
+              <div class="exp-xcard-body">
+                <div class="exp-xcard-top">
+                  <div class="exp-xcard-icon"><i class="fas fa-network-wired"></i></div>
+                  <div class="exp-xcard-meta">
+                    <span class="exp-xcard-period">Jun 2025 – Sep 2025</span>
+                    <span class="exp-badge">Contract</span>
+                  </div>
+                </div>
+                <h4 class="exp-xcard-title">ICT Officer</h4>
+                <p class="exp-xcard-company"><i class="fas fa-hands-helping"></i> WOPEE Org CBO · Kenya</p>
+                <p class="exp-xcard-desc">Managed the full technology footprint of a community-based organization — network infrastructure, device maintenance, staff digital training, and cybersecurity. Developed and launched the organization's web presence for donor outreach.</p>
+                <div class="exp-tags">
+                  <span>Network Admin</span><span>WordPress</span><span>IT Support</span><span>Cybersecurity</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 — Industrial Attachment, FinSprint -->
+            <div class="exp-xcard exp-xcard--steel reveal" data-delay="200">
+              <div class="exp-xcard-accent"></div>
+              <div class="exp-xcard-body">
+                <div class="exp-xcard-top">
+                  <div class="exp-xcard-icon"><i class="fas fa-code"></i></div>
+                  <div class="exp-xcard-meta">
+                    <span class="exp-xcard-period">Jun 2024 – Aug 2024</span>
+                    <span class="exp-badge">Attachment</span>
+                  </div>
+                </div>
+                <h4 class="exp-xcard-title">Software Developer — Industrial Attachment</h4>
+                <p class="exp-xcard-company"><i class="fas fa-building"></i> FinSprint Ltd · Nairobi, Kenya</p>
+                <p class="exp-xcard-desc">First professional exposure to fintech engineering. Wrote REST API endpoints, debugged production issues, and adopted production code standards under senior mentorship — the foundation that led to returning as a full intern in 2026.</p>
+                <div class="exp-tags">
+                  <span>Java</span><span>Spring Boot</span><span>PHP</span><span>MySQL</span><span>REST APIs</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ═══ 2. EDUCATION ═══ -->
+        <div class="exp-block">
+          <div class="exp-block-header reveal">
+            <div class="exp-block-icon exp-block-icon--edu"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h3 class="exp-block-title">Education</h3>
+              <p class="exp-block-sub">Academic foundation</p>
+            </div>
+          </div>
+
+          <div class="edu-wide-card reveal">
+            <div class="edu-wide-left">
+              <div class="edu-wide-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h4 class="edu-wide-degree">B.Sc. Computer Science</h4>
+                <p class="edu-wide-school">Maasai Mara University</p>
+                <p class="edu-wide-period">2022 – 2025</p>
+              </div>
+            </div>
+            <div class="edu-wide-right">
+              <div class="edu-wide-pill"><i class="fas fa-code"></i> Software Engineering</div>
+              <div class="edu-wide-pill"><i class="fas fa-database"></i> Database Systems</div>
+              <div class="edu-wide-pill"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+              <div class="edu-wide-pill"><i class="fas fa-project-diagram"></i> System Design</div>
+            </div>
+            <div class="edu-wide-years">
+              <div class="edu-year-bar">
+                <span>2022</span>
+                <div class="edu-year-track"><div class="edu-year-fill"></div></div>
+                <span>2025</span>
+              </div>
+              <p class="edu-year-label">3-year programme · Completed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ 3. WHY WORK WITH ME ═══ -->
+        <div class="exp-block">
+          <div class="exp-block-header reveal">
+            <div class="exp-block-icon exp-block-icon--why"><i class="fas fa-star"></i></div>
+            <div>
+              <h3 class="exp-block-title">Why Work With Me</h3>
+              <p class="exp-block-sub">What you actually get</p>
+            </div>
+          </div>
+
+          <div class="why-grid-4 reveal">
+            <div class="why-xcard" data-delay="0">
+              <div class="why-xcard-icon why-xcard-icon--blue"><i class="fas fa-globe-africa"></i></div>
+              <h5>Remote-Ready</h5>
+              <p>Async workflows, distributed teams, any time zone — no friction.</p>
+            </div>
+            <div class="why-xcard" data-delay="80">
+              <div class="why-xcard-icon why-xcard-icon--indigo"><i class="fas fa-comments"></i></div>
+              <h5>Clear Communicator</h5>
+              <p>Regular updates, clean docs, and zero surprises at delivery.</p>
+            </div>
+            <div class="why-xcard" data-delay="160">
+              <div class="why-xcard-icon why-xcard-icon--amber"><i class="fas fa-vial"></i></div>
+              <h5>Quality-First</h5>
+              <p>Tested, documented, and reviewable code shipped every time.</p>
+            </div>
+            <div class="why-xcard" data-delay="240">
+              <div class="why-xcard-icon why-xcard-icon--sage"><i class="fas fa-rocket"></i></div>
+              <h5>Ships Fast</h5>
+              <p>MVP-first thinking with CI/CD pipelines and zero-downtime deploys.</p>
+            </div>
+          </div>
+
+          <div class="exp-cta reveal" style="margin-top: 32px; justify-content: center;">
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="resume.pdf" class="btn btn-primary" download>
+              <i class="fas fa-file-alt"></i> Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- ═══ 4. AVAILABLE FOR REMOTE / FREELANCE ═══ -->
+        <div class="freelance-card reveal">
+          <div class="freelance-card-left">
+            <div class="freelance-status">
+              <span class="freelance-dot"></span>
+              Available for Remote Work
+            </div>
+            <h3 class="freelance-title">Open to Freelance & Remote Full Stack Projects</h3>
+            <p class="freelance-desc">Whether you need a complete web app, a backend API, a React frontend, or a system built from scratch — I'm ready to collaborate from anywhere in the world. Fast turnaround, clear communication, production-quality code.</p>
+            <div class="freelance-stack">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fas fa-leaf"></i> Spring Boot</span>
+              <span><i class="fas fa-database"></i> PostgreSQL</span>
+              <span><i class="fab fa-php"></i> Laravel</span>
+              <span><i class="fab fa-docker"></i> Docker</span>
+            </div>
+          </div>
+          <div class="freelance-card-right">
+            <div class="freelance-meta">
+              <div class="freelance-meta-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Response Time</strong>
+                  <span>Within 2 hours</span>
+                </div>
+              </div>
+              <div class="freelance-meta-item">
+                <i class="fas fa-globe"></i>
+                <div>
+                  <strong>Work Mode</strong>
+                  <span>Remote · Worldwide</span>
+                </div>
+              </div>
+              <div class="freelance-meta-item">
+                <i class="fas fa-code-branch"></i>
+                <div>
+                  <strong>Specialty</strong>
+                  <span>Full Stack · API · SaaS</span>
+                </div>
+              </div>
+            </div>
+            <div class="freelance-actions">
+              <a href="#contact" class="btn btn-primary">Start a Project <i class="fas fa-arrow-right"></i></a>
+              <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20have%20a%20freelance%20project%20for%20you." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp Me
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ===== SERVICES SECTION ===== -->
     <section class="services" id="services">
       <div class="container">
@@ -241,7 +506,7 @@
               <li><i class="fas fa-check"></i> Framer Motion animations</li>
               <li><i class="fas fa-check"></i> Mobile-first responsive layouts</li>
             </ul>
-            <div class="service-price">From <strong>$1000</strong></div>
+            <div class="service-price">From <strong>$500</strong></div>
           </div>
 
           <div class="service-card service-card--featured reveal" data-delay="100">
@@ -255,7 +520,7 @@
               <li><i class="fas fa-check"></i> Auth (JWT / OAuth2)</li>
               <li><i class="fas fa-check"></i> Cloud deployment & CI/CD</li>
             </ul>
-            <div class="service-price">From <strong>$2000</strong></div>
+            <div class="service-price">From <strong>$1,200</strong></div>
           </div>
 
           <div class="service-card reveal" data-delay="200">
@@ -268,7 +533,7 @@
               <li><i class="fas fa-check"></i> API documentation (Swagger)</li>
               <li><i class="fas fa-check"></i> Security & validation</li>
             </ul>
-            <div class="service-price">From <strong>$1500</strong></div>
+            <div class="service-price">From <strong>$800</strong></div>
           </div>
 
           <div class="service-card reveal" data-delay="300">
@@ -281,7 +546,7 @@
               <li><i class="fas fa-check"></i> DB query optimization</li>
               <li><i class="fas fa-check"></i> Caching strategies</li>
             </ul>
-            <div class="service-price">From <strong>$750</strong></div>
+            <div class="service-price">From <strong>$400</strong></div>
           </div>
 
           <div class="service-card reveal" data-delay="400">
@@ -294,7 +559,7 @@
               <li><i class="fas fa-check"></i> Test coverage implementation</li>
               <li><i class="fas fa-check"></i> Documentation</li>
             </ul>
-            <div class="service-price">From <strong>$800</strong></div>
+            <div class="service-price">From <strong>$600</strong></div>
           </div>
 
           <div class="service-card reveal" data-delay="500">
@@ -307,13 +572,13 @@
               <li><i class="fas fa-check"></i> User auth & subscriptions</li>
               <li><i class="fas fa-check"></i> Launch-ready deployment</li>
             </ul>
-            <div class="service-price">From <strong>$2,500</strong></div>
+            <div class="service-price">From <strong>$2,000</strong></div>
           </div>
 
         </div>
         <div class="services-cta reveal">
           <p>Not sure what you need? Let's talk — I'll tell you exactly what it takes.</p>
-          <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20need%20help%20with%20a%20project." target="_blank" class="btn btn-whatsapp btn-lg">
+          <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20need%20help%20with%20a%20project." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
             <i class="fab fa-whatsapp"></i> Discuss Your Project
           </a>
         </div>
@@ -578,7 +843,7 @@
         </div>
 
         <div class="projects-cta reveal">
-          <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20want%20to%20discuss%20a%20project%20like%20one%20of%20your%20portfolio%20items." target="_blank" class="btn btn-primary btn-lg">
+          <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20want%20to%20discuss%20a%20project%20like%20one%20of%20your%20portfolio%20items." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
             Start Your Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -660,7 +925,7 @@
           <h2>Ready to Build Something Great?</h2>
           <p>Let's turn your idea into a production-ready application. Fast, clean, and scalable.</p>
           <div class="cta-band-actions">
-            <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I'm%20ready%20to%20start%20a%20project." target="_blank" class="btn btn-whatsapp btn-lg">
+            <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I'm%20ready%20to%20start%20a%20project." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
               <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
             <a href="mailto:haikalahmed38@gmail.com" class="btn btn-outline btn-lg">
@@ -685,7 +950,7 @@
             <p>Reach out directly via WhatsApp or email — I'm fast to respond and always happy to discuss ideas.</p>
 
             <div class="contact-methods">
-              <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project." target="_blank" class="contact-method contact-method--whatsapp">
+              <a href="https://wa.me/254758382221?text=Hi%20Haikal!%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="contact-method contact-method--whatsapp">
                 <div class="contact-method-icon"><i class="fab fa-whatsapp"></i></div>
                 <div>
                   <span class="contact-method-label">WhatsApp (Fastest Response)</span>
@@ -724,11 +989,11 @@
             <form class="contact-form" id="contactForm">
               <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Haikal Ahmed" required />
+                <input type="text" id="name" name="name" placeholder="haikal ahmed" required />
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="haikalahmed38@gmail.com" required />
+                <input type="email" id="email" name="email" placeholder="haikal@gmail.com" required />
               </div>
               <div class="form-group">
                 <label for="budget">Project Budget</label>
@@ -754,7 +1019,7 @@
               <div class="success-icon"><i class="fas fa-check-circle"></i></div>
               <h3>Message Sent!</h3>
               <p>Thanks for reaching out. I'll get back to you within 2 hours.</p>
-              <a href="https://wa.me/254758382221" target="_blank" class="btn btn-whatsapp">
+              <a href="https://wa.me/254758382221" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                 <i class="fab fa-whatsapp"></i> Follow up on WhatsApp
               </a>
             </div>
@@ -775,11 +1040,13 @@
           </a>
           <p>Full Stack Developer building scalable web applications that drive real business results.</p>
           <div class="footer-social">
-            <a href="https://wa.me/254758382221" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/254758382221" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="mailto:haikalahmed38@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             <a href="tel:+254758382221" aria-label="Phone"><i class="fas fa-phone"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <!-- TODO: Replace # with your real GitHub profile URL -->
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <!-- TODO: Replace # with your real LinkedIn profile URL -->
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
         <div class="footer-links-col">
@@ -805,7 +1072,7 @@
         <div class="footer-links-col">
           <h4>Contact</h4>
           <ul>
-            <li><a href="https://wa.me/254758382221" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a href="https://wa.me/254758382221" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
             <li><a href="tel:+254758382221"><i class="fas fa-phone"></i> +254 758 382 221</a></li>
             <li><a href="mailto:haikalahmed38@gmail.com"><i class="fas fa-envelope"></i> haikalahmed38@gmail.com</a></li>
           </ul>
@@ -813,7 +1080,7 @@
       </div>
       <div class="footer-bottom">
         <p>© <span id="currentYear"></span> Haikal Ahmed. All rights reserved.</p>
-        <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+        
       </div>
     </div>
   </footer>
@@ -828,13 +1095,8 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i class="fas fa-arrow-up"></i>
   </button>
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-  emailjs.init("-VWW3oLVLL-IrH8Ur");
-</script>
-
-
-  <script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
