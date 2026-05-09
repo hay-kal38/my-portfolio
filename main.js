@@ -56,6 +56,34 @@ if (cursor && cursorFollower) {
   });
 }
 
+/* ===== THEME TOGGLE ===== */
+const themeToggleButtons = document.querySelectorAll('[data-theme-toggle]');
+const themeLabels = document.querySelectorAll('[data-theme-label]');
+
+function setTheme(theme) {
+  const isLight = theme === 'light';
+  document.body.classList.toggle('theme-light', isLight);
+  document.body.classList.toggle('theme-dark', !isLight);
+  localStorage.setItem('theme', theme);
+
+  themeToggleButtons.forEach(button => {
+    button.setAttribute('aria-label', isLight ? 'Switch to night mode' : 'Switch to light mode');
+  });
+
+  themeLabels.forEach(label => {
+    label.textContent = isLight ? 'Night mode' : 'Light mode';
+  });
+}
+
+setTheme(localStorage.getItem('theme') || 'light');
+
+themeToggleButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const nextTheme = document.body.classList.contains('theme-light') ? 'dark' : 'light';
+    setTheme(nextTheme);
+  });
+});
+
 /* ===== NAVBAR ===== */
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -243,52 +271,57 @@ if (track) {
   });
 }
 
-emailjs.init("-VWW3oLVLL-IrH8Ur");
-
-emailjs.init("-VWW3oLVLL-IrH8Ur");
+/* ===== CONTACT FORM ===== */
+emailjs.init('-VWW3oLVLL-IrH8Ur');
 
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 const submitBtn = document.getElementById('submitBtn');
 
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  const btnText = submitBtn.querySelector('.btn-text');
-  const btnLoading = submitBtn.querySelector('.btn-loading');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
 
-  btnText.style.display = 'none';
-  btnLoading.style.display = 'flex';
-  submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'flex';
+    submitBtn.disabled = true;
 
-  const templateParams = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    budget: document.getElementById('budget').value,
-    message: document.getElementById('message').value
-  };
+    const senderName  = document.getElementById('name').value;
+    const senderEmail = document.getElementById('email').value;
 
-  try {
-    const response = await emailjs.send(
-      "service_y7dednj",   // ✅ FIXED HERE
-      "template_k3i4ccv",
-      templateParams
-    );
+    const templateParams = {
+      // cover both naming conventions EmailJS templates commonly use
+      name:       senderName,
+      email:      senderEmail,
+      from_name:  senderName,
+      from_email: senderEmail,
+      reply_to:   senderEmail,
+      to_email:   senderEmail,
+      budget:        document.getElementById('budget').value,
+      message:       document.getElementById('message').value,
+      user_message:  document.getElementById('message').value,
+    };
 
-    console.log("SUCCESS:", response);
+    try {
+      await emailjs.send('service_y7dednj', 'template_k3i4ccv', templateParams);
+      contactForm.style.display = 'none';
+      formSuccess.style.display = 'block';
+      // Auto-reply is best-effort — don't block success if it fails
+      emailjs.send('service_y7dednj', 'template_l3mpxlb', templateParams)
+        .catch(err => console.warn('Auto-reply skipped:', err.text));
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      btnText.style.display = 'block';
+      btnLoading.style.display = 'none';
+      submitBtn.disabled = false;
+      alert('Message failed to send. Please try WhatsApp or email directly.');
+    }
+  });
+}
 
-    contactForm.style.display = 'none';
-    formSuccess.style.display = 'block';
-
-  } catch (error) {
-    console.log("FULL ERROR:", error);
-    alert("Failed to send message. Check console.");
-  }
-
-  btnText.style.display = 'block';
-  btnLoading.style.display = 'none';
-  submitBtn.disabled = false;
-});
 
 /* ===== BACK TO TOP ===== */
 const backToTop = document.getElementById('backToTop');
@@ -385,17 +418,6 @@ document.querySelectorAll('.tech-tag').forEach(tag => {
     setTimeout(() => { this.style.transform = ''; }, 300);
   });
 });
-
-/* ===== INIT CONTACT FORM TABLE ===== */
-async function initContactTable() {
-  try {
-    // Try to access the contact table
-    await fetch('tables/contact_messages?limit=1');
-  } catch (e) {
-    // Table might not exist yet, that's ok
-  }
-}
-initContactTable();
 
 /* ===== PERFORMANCE: Lazy Load Code Card ===== */
 const codeCard = document.querySelector('.code-card');
